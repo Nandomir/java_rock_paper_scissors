@@ -1,6 +1,8 @@
 package com.codeclan.rockpaperscissors;
 
 
+import android.util.Log;
+
 import java.util.Random;
 
 /**
@@ -19,6 +21,40 @@ public class RockPaperScissors {
        String computerChoice = choices[randomIndex];
 
        return computerChoice;
+
+   }
+
+   public String compareHands(String playerChoice) {
+
+       String computer = computerChoice();
+
+       if (computer == playerChoice) {
+           return "It's a draw!!";
+       }
+       switch (playerChoice) {
+           case "rock":
+               if (computer == "scissors") {
+                   return "Player wins!";
+               } else {
+                   return "Computer wins =(";
+               }
+//
+           case "scissors":
+               if (computer == "paper") {
+                   return "Player wins!";
+               } else {
+                   return "Computer wins =( ";
+               }
+//
+           case "paper":
+               if (computer == "rock") {
+                   return "Player wins!";
+               } else {
+                   return "Computer wins =(";
+               }
+//
+       }
+       return null;
    }
 
 }

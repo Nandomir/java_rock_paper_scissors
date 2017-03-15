@@ -25,4 +25,10 @@ public class RockPaperScissorsTest {
         assertNotNull(computerChoice);
     }
 
+    @Test
+    public void testCompareHands(){
+
+        assertNotNull(game.compareHands("rock"));
+    }
+
 }
