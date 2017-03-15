@@ -27,14 +27,14 @@ public class RockPaperScissorsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    public void onPaperButtonClicked(View view) {
-//        Intent intent = new Intent(this, PaperActivity.class);
-//        startActivity(intent);
-//    }
-//    public void onScissorsButtonClicked(View view) {
-//        Intent intent = new Intent(this, ScissorsActivity.class);
-//        startActivity(intent);
-//    }
+    public void onPaperButtonClicked(View view) {
+        Intent intent = new Intent(this, PaperActivity.class);
+        startActivity(intent);
+    }
+    public void onScissorsButtonClicked(View view) {
+        Intent intent = new Intent(this, ScissorsActivity.class);
+        startActivity(intent);
+    }
 
 
 }
