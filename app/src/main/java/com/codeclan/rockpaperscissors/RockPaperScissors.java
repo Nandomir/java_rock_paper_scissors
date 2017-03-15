@@ -11,6 +11,14 @@ import java.util.Random;
 
 public class RockPaperScissors {
 
+    int computerWins;
+    int playerWins;
+
+    public RockPaperScissors(){
+        this.computerWins = 0;
+        this.playerWins = 0;
+    }
+
    public String computerChoice(){
        String[] choices = new String[3];
        choices[0] = "rock";
@@ -27,34 +35,47 @@ public class RockPaperScissors {
    public String compareHands(String playerChoice) {
 
        String computer = computerChoice();
+       String result = "";
 
-       if (computer == playerChoice) {
-           return "It's a draw!!";
-       }
+
        switch (playerChoice) {
            case "rock":
                if (computer == "scissors") {
-                   return "Player wins!";
+                   result = "Player wins!";
+                   playerWins++;
                } else {
-                   return "Computer wins =(";
-               }
+                   result = "Computer wins =(";
+                   computerWins++;
+               } break;
 //
            case "scissors":
                if (computer == "paper") {
-                   return "Player wins!";
+                   result = "Player wins!";
+                   playerWins++;
                } else {
-                   return "Computer wins =( ";
-               }
+                   result = "Computer wins =( ";
+                   computerWins++;
+               } break;
 //
            case "paper":
                if (computer == "rock") {
-                   return "Player wins!";
+                   result = "Player wins!";
+                   playerWins++;
                } else {
-                   return "Computer wins =(";
-               }
+                   result = "Computer wins =(";
+                   computerWins++;
+               } break;
 //
        }
-       return null;
+       if (computer == playerChoice) {
+           result = "It's a draw!!";
+       }
+       return result + "\nComputer chose: " + computer + "\nYou chose: " + playerChoice;
+   }
+
+   public String runningTotal(){
+       return "You: " + playerWins + "\nComputer: " + computerWins;
+
    }
 
 }

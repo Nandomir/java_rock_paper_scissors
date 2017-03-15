@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.codeclan.rockpaperscissors.RockPaperScissorsActivity">
+    tools:context="com.codeclan.rockpaperscissors.RockPaperScissorsActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make your choice (wisely):"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:padding="30dp"/>
 
     <Button
         android:id="@+id/rockButton"
@@ -14,14 +24,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteY="-8dp"
-        tools:layout_editor_absoluteX="257dp" />
+        tools:layout_editor_absoluteX="257dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        />
     <Button
         android:id="@+id/paperButton"
         android:textSize="30dp"
         android:text="Paper"
         android:onClick="onPaperButtonClicked"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
     <Button
         android:id="@+id/scissorsButton"
         android:textSize="30dp"
@@ -30,6 +45,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteY="80dp"
-        tools:layout_editor_absoluteX="128dp" />
+        tools:layout_editor_absoluteX="128dp"
+        android:layout_gravity="center"/>
 
-</android.support.constraint.ConstraintLayout>
+    <!--<TextView-->
+        <!--android:id="@+id/scoreView"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+</LinearLayout>

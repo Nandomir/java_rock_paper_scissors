@@ -5,12 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class RockPaperScissorsActivity extends AppCompatActivity {
 
     Button rockButton;
     Button paperButton;
     Button scissorsButton;
+    TextView scoreView;
+//    RockPaperScissors game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,7 @@ public class RockPaperScissorsActivity extends AppCompatActivity {
         rockButton = (Button)findViewById(R.id.rockButton);
         paperButton = (Button)findViewById(R.id.paperButton);
         scissorsButton = (Button)findViewById(R.id.scissorsButton);
+
     }
 
     public void onRockButtonClicked(View view) {
